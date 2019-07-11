@@ -1,0 +1,16 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: cmp-user
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+#控制台日志太多了，我只想打印我的包下面的日志，无论怎么请求，都只打日志，没日志控制台什么都没有
+logging:
+  level:
+    com.sugon.cloudview.user.cmpuser: debug
+#    org.springframework.web: debug
